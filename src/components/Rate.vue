@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref, computed, defineEmits } from 'vue'
+import { ref, computed } from 'vue'
 
 const props = defineProps({
   value: Number,
