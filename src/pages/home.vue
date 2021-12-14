@@ -12,13 +12,14 @@
   <Rate :value="2" theme="blue">描述评分</Rate>
   <div>{{x}}, {{y}}</div>
   <button @click="toggle">toggle</button>
-  <h1 class="count" @click="add">{{count}}</h1>
+  <Count />
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { useFullscreen } from '@vueuse/core'
 import TodoList from '../components/TodoList.vue'
+import Count from '../components/Count.vue'
 import Rate from '../components/Rate.vue'
 import useMouse from '../utils/mouse'
 
@@ -27,8 +28,6 @@ const { isFullscreen, enter, exit, toggle } = useFullscreen()
 
 const showTitle = ref(true);
 const score = ref(3)
-const count = ref(0)
-const color = ref('red')
 
 function update(num) {
   score.value = num
@@ -37,17 +36,9 @@ function update(num) {
 function toggleTitle() {
   showTitle.value = !showTitle.value;
 }
-
-function add() {
-  count.value++
-  color.value = Math.random() > 0.5 ? 'red' : 'blue'
-}
 </script>
 
 <style scope>
-.count {
-  color: v-bind(color);
-}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s linear;
