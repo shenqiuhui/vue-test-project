@@ -46,12 +46,12 @@ const useTotos = () => {
 
       setTimeout(() => {
         showModal.value = false
-      }, 1500);
+      }, 1500)
 
       return
     }
 
-    const uuid = uuidv4();
+    const uuid = uuidv4()
 
     todos.value.push({
       id: uuid,

@@ -63,14 +63,32 @@ const {
 } = useTotos()
 </script>
 
-<style scope>
-ul {
-  list-style: none;
-}
+<style lang="scss" scope>
+$padding: 10px;
+$white: #FFFFFF;
 
-.done {
-  color: grey;
-  text-decoration: line-through;
+ul {
+  width: 500px;
+  margin:0 auto;
+  padding: 0;
+  list-style: none;
+
+  li {
+    list-style-type: none;
+    margin-bottom: $padding;
+    padding: $padding;
+    background: $white;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .done {
+    color: grey;
+    text-decoration: line-through;
+  }
 }
 
 .info-wrapper {
