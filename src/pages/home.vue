@@ -38,7 +38,7 @@ function toggleTitle() {
 }
 </script>
 
-<style scope>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s linear;

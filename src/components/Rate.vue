@@ -45,7 +45,7 @@ const fontWidth = computed(() => {
 const emits = defineEmits(['update:value'])
 
 function mouseOver(i) {
-  width.value = i;
+  width.value = i
 }
 
 function mouseOut() {

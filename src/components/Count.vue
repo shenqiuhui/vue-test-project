@@ -17,7 +17,7 @@ const color = ref('red')
 
 function add() {
   color.value = Math.random() > 0.5 ? 'red' : 'blue'
-  store.commit('add');
+  store.commit('add')
 }
 
 function asyncAdd() {
@@ -25,7 +25,7 @@ function asyncAdd() {
 }
 </script>
 
-<style scope>
+<style scoped>
 .count {
   color: v-bind(color);
 }

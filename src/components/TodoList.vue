@@ -63,7 +63,7 @@ const {
 } = useTotos()
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 $padding: 10px;
 $white: #FFFFFF;
 
